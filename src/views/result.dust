@@ -1,0 +1,53 @@
+{>"layout"/}
+
+{<html_body}
+<div class="cnc-loading loading hide">
+       <img src="{@getImgPath src="squares.gif"/}" alt="Loading...">
+       <div class="fs-18 fw-600">Please wait ...</div>
+   </div>
+  <div class="col-md-6 col-sm-6 col-xs-6 pd-t50 pd-b20 txt-center">
+    <a href="<%=MnpConstants.baseUrl%>" > <!-- ASK WHAT THIS IS -->
+          <img src="{@getImgPath src="CashNoCash-logo.png"/}">
+        </a>
+    </div>
+    <div class="col-md-6 col-sm-6 col-xs-6 pd-t50 pd-b20 txt-center">
+        <button class="mr-t20 btn btn-success btn-alert">Create Alert</button>
+    </div>
+  <div class="col-md-12 no-padding">
+     <div class="col-md-9 col-xs-12">
+         <div class="result-div pd-t50"></div>
+     </div>
+     <div class="col-md-3 col-xs-12">
+         <div id="ads">
+           <div class="ad-row">
+               <div id="lp-1"></div>
+           </div>
+           <div class="ad-row">
+               <div id="lp-2"></div>
+           </div>
+         </div>
+     </div>
+  </div>
+       <!--  alert modal -->
+    <div class="modal fade fade-scale alert-modal" id="alert-modal" data-rId="" data-id="" tabindex="-1" role="dialog" >
+    <div class="modal-dialog modal-sm text-center">
+        <div class="modal-content">
+            <div class="modal-body">
+               <form id="create-alert" class="">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        <i class="icon-close"></i>
+                    </button>
+                    <div class="title pd-b20"><strong>Alert me</strong></div>
+                    <div class="pd-b20">
+                     <input type="email" name="email" id="email" placeholder="Enter your email here">
+                    </div>
+                    <div class="text-center">
+                       <button type="button" class="btn btn-success btn-alert-submit">SUBMIT</button>
+                    </div>
+                    <div class="pd-tb10">We will email you once cash becomes available around this area</div>
+                </form>
+            </div>
+        </div>
+   </div>
+  </div>
+  {/html_body}
