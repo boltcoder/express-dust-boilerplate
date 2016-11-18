@@ -1,12 +1,8 @@
-import DFPUtil from '../helpers/utils/dfp';
 
 export default class BaseController {
   constructor(req, res) {
     this.req = req;
     this.res = res;
-    this.footer = true;
-    this.header = true;
-    this.dfp = true;
   }
   /**
   * http redirects
@@ -18,20 +14,20 @@ export default class BaseController {
   /*
    force send json response as custom status
    */
+
    sendAsXXX(response, xxx) {
     this.res.status(xxx);
     this.res.send(response);
     return;
   }
-  /*
-    500 error page TODO replace with html
-    */
-    show500(error) {
-      const text = error instanceof Error ? `${error.stack}` : JSON.stringify(error);
-      this.res.status(500);
-      this.res.send(`Error Occured: \n ${text}`);
-      return;
-    }
+
+  show500(error) {
+    const text = error instanceof Error ? `${error.stack}` : JSON.stringify(error);
+    this.res.status(500);
+    this.res.send(`Error Occured: \n ${text}`);
+    return;
+  }
+
 
   /**
   * Catch exception thrown by done() method on Promise
@@ -46,6 +42,7 @@ export default class BaseController {
   showSampleOutput(){
     this.sendAsXXX('SAMPLE APP WORKS',200);
   }
+
 
 
 
@@ -76,7 +73,6 @@ export default class BaseController {
     this.res.render(path, viewParams);
   }
 
-
   /* Log Errors*/
   logError(message, error) {
     const metadata = {
@@ -84,5 +80,7 @@ export default class BaseController {
     };
     appLogger.debug(message, metadata);
   }
+
+
 
 }

@@ -19,9 +19,7 @@ export default (app, proxy) => {
   app.get('/', (req,res,next)=>{
     (new controllers.Home(req, res, next)).showHomePage();
   });
-
-
-  app.get('*', (req,res,next)=> {
+  app.get('*', (req,res,next)=>{
     (new controllers.Base(req, res, next)).showSampleOutput();
 
   });

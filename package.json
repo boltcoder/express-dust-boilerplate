@@ -4,6 +4,7 @@
   "description": "Cash No Cash Hiree Quikr",
   "main": "index.js",
   "scripts": {
+    "setup": "npm install && sudo mkdir /var/log/app && sudo touch /var/log/app/accessLogs.log /var/log/app/debugLogs.log /var/log/app/testLogs.log /var/log/app/applicationApiLogs.log ",
     "start:dev": "./node_modules/.bin/nodemon --watch ./src index.js",
     "cleanbuild": "rm -rf build/*",
     "build:server": "NODE_ENV=production ./node_modules/.bin/babel src -d build --copy-files"

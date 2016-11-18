@@ -1,3 +1,4 @@
+
 /*
     ALL CONFIGURABLE ENUMS HERE
  */

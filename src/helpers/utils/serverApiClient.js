@@ -22,7 +22,7 @@ export default class ApiCall {
   constructor(options = {}) {
     this.setLogOnOk(false);
 
-    this.setLogFile(options.logFile || 'ApplicationApiLog')
+    this.setLogFile(options.logFile || 'applicationApiLog')
     .setLogFinder(options.logFinder || 'API')
     .setLogOnOk(options.logOnOk || true)
     .setLogOnErr(options.logOnErr || true)
